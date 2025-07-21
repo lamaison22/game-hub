@@ -2,17 +2,27 @@ import apiClient from "@/services/api-client";
 import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
 
-const useGames = ()=> {
 
-interface Game {
+export interface Platform{
+  id:number,
+  name:string,
+  slug:string
+}
+
+export interface Game {
   id: number;
   name: string;
+  background_image:string,
+  parent_platforms: {platform:Platform}[] //isso pq o cara que fez foi burro e fez q cada parent tenha um tipo platform que por si só é uma interface com nome, id etc
 }
 
 interface FetchGamesResp {
   count: number;
   results: Game[];
 }
+const useGames = ()=> {
+
+
 
 const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
