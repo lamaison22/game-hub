@@ -13,7 +13,8 @@ export interface Game {
   id: number;
   name: string;
   background_image:string,
-  parent_platforms: {platform:Platform}[] //isso pq o cara que fez foi burro e fez q cada parent tenha um tipo platform que por si só é uma interface com nome, id etc
+  parent_platforms: {platform:Platform}[], //isso pq o cara que fez foi burro e fez q cada parent tenha um tipo platform que por si só é uma interface com nome, id etc
+  metacritic:number
 }
 
 interface FetchGamesResp {
