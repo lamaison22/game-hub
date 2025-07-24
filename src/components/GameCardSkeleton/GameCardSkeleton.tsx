@@ -4,9 +4,7 @@ import React from "react";
 function GameCardSkeleton() {
   console.log("GameCardSkeleton renderizando!");
   return (
-    <Card.Root borderWidth="2px" borderColor="red.500">
-      {" "}
-      {/* Debug visual */}
+    <Card.Root>
       <Skeleton height={"200px"} bg="gray.300" />
       <Card.Body>
         <SkeletonText noOfLines={3} gap="4" />

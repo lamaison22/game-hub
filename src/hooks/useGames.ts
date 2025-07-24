@@ -32,15 +32,14 @@ const useGames = () => {
     apiClient
       .get<FetchGamesResp>("/games", {signal: controller.signal})
       .then((res) => {
-        setGames(res.data.results);
-        // Força delay de 2 segundos para ver o skeleton
-        setTimeout(() => setLoading(false), 2000);
+        setGames(res.data.results)
+        
       })
       .catch((err) => {
         if(err instanceof CanceledError) return;
         setError(err.message);
-        setTimeout(() => setLoading(false), 2000);
-      });
+        
+      }).finally(()=>setTimeout(()=>setLoading(false),2000))
       
     return () => controller.abort();
   }, []);
