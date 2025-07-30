@@ -12,8 +12,23 @@ function GameCard({ game }: Props) {
     <>
       <Card.Root borderRadius="10px" overflow={"hidden"}>
         <Image src={getCroppedImage(game.background_image)} />
-        <Card.Body gap="2">
-          <Heading>{game.name}</Heading>
+        <Card.Body
+          gap="2"
+          p={3}
+          height={"100px"}
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"space-between"}
+        >
+          <Heading
+            size={"md"}
+            overflow={"hidden"}
+            textOverflow={"ellipsis"}
+            whiteSpace={"nowrap"}
+            title={game.name}
+          >
+            {game.name}
+          </Heading>
           <HStack justifyContent={"space-between"}>
             <PlatformIconList
               platforms={game.parent_platforms.map((p) => p.platform)}
