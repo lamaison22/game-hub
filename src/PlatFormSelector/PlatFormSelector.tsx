@@ -1,7 +1,6 @@
 import { Platform } from "@/hooks/useGames";
 import usePlatform from "@/hooks/usePlatForm";
 import { Button, Menu, Portal } from "@chakra-ui/react";
-import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
@@ -9,7 +8,7 @@ interface Props {
 }
 
 function PlatFormSelector({ onSelectPlatform, selectedPlatform }: Props) {
-  const { data, isLoading, error } = usePlatform();
+  const { data, error } = usePlatform();
   if (error) return null;
   return (
     <Menu.Root>

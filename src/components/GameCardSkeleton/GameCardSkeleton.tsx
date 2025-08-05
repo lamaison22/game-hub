@@ -1,5 +1,4 @@
 import { Card, Skeleton, SkeletonText } from "@chakra-ui/react";
-import React from "react";
 
 function GameCardSkeleton() {
   console.log("GameCardSkeleton renderizando!");

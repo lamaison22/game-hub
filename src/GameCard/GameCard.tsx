@@ -3,8 +3,7 @@ import Emojis from "@/components/Emojis/Emojis";
 import PlatformIconList from "@/components/PlatformIconList/PlatformIconList";
 import { Game } from "@/hooks/useGames";
 import getCroppedImage from "@/services/crop-image";
-import { Card, CardBody, Heading, HStack, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import { Card, Heading, HStack, Image } from "@chakra-ui/react";
 interface Props {
   game: Game;
 }
