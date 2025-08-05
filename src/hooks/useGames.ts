@@ -17,7 +17,9 @@ export interface Game {
   name: string;
   background_image:string,
   parent_platforms: {platform:Platform}[], //isso pq o cara que fez foi burro e fez q cada parent tenha um tipo platform que por si só é uma interface com nome, id etc
-  metacritic:number
+  metacritic:number,
+  rating_top:number,
+  rating: number
 }
 
 

@@ -1,4 +1,5 @@
 import CriticScore from "@/components/CriticScore.tsx/CriticScore";
+import Emojis from "@/components/Emojis/Emojis";
 import PlatformIconList from "@/components/PlatformIconList/PlatformIconList";
 import { Game } from "@/hooks/useGames";
 import getCroppedImage from "@/services/crop-image";
@@ -35,6 +36,7 @@ function GameCard({ game }: Props) {
             />
             <CriticScore score={game.metacritic} />
           </HStack>
+          <Emojis rating={game.rating_top} />
         </Card.Body>
       </Card.Root>
     </>
